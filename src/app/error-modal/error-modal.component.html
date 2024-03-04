@@ -1,0 +1,11 @@
+<div *ngIf="isOpen" class="modal-overlay" (click)="closeModal.emit()">
+    <div class="modal-content" (click)="stopPropagation($event)">
+      <div class="modal-header">
+        <h3>Error</h3>
+        <button (click)="closeModal.emit()" class="close-button">X</button>
+      </div>
+      <div class="modal-body">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </div>

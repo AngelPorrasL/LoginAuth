@@ -4,13 +4,14 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ErrorModalComponent } from "../error-modal/error-modal.component";
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [ReactiveFormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+    selector: 'app-login',
+    standalone: true,
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.css',
+    imports: [ReactiveFormsModule, ErrorModalComponent]
 })
 export class LoginComponent {
   // Inyección de dependencias para FormBuilder, HttpClient, AuthService y Router
